@@ -26,6 +26,7 @@ install:
 script:
 - mvn initialize -N -Pset-git-version
 - mvn package
+- ls -R
 
 after_script:
 - cp assembly/target/plugins/* $eclipse_for_test/eclipse/plugins/
