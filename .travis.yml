@@ -29,7 +29,7 @@ script:
 
 after_script:
 - cp assembly/target/plugins/* $eclipse_for_test/eclipse/plugins/
-- ./ru.bmstu.rk9.rao.rcptt/run_tests.sh $rcptt_runner/eclipse $eclipse_for_test/eclipse
+- ./ru.bmstu.rk9.rao.rcptt/run_tests.sh $TRAVIS_BUILD_DIR/$rcptt_runner/eclipse $TRAVIS_BUILD_DIR/$eclipse_for_test/eclipse
 
 before_deploy:
   - curl -sL "http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/oxygen/1a/eclipse-dsl-oxygen-1a-win32-x86_64.zip&r=1" -o $win_x64_archive --retry 5
