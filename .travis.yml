@@ -26,9 +26,6 @@ install:
 script:
 - mvn initialize -N -Pset-git-version
 - mvn package
-- ls -R
-
-after_script:
 - cp assembly/target/plugins/* $eclipse_for_test/eclipse/plugins/
 - ./ru.bmstu.rk9.rao.rcptt/run_tests.sh $TRAVIS_BUILD_DIR/$rcptt_runner/eclipse $TRAVIS_BUILD_DIR/$eclipse_for_test/eclipse
 

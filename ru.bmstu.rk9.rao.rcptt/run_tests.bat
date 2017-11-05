@@ -18,7 +18,7 @@ set htmlReport=%testResults%\results.html
 rmdir /q /s %testResults%
 mkdir %testResults%
 
-java -jar %runnerPath%\plugins\org.eclipse.equinox.launcher_1.3.200.v20160318-1642.jar ^
+java -jar %runnerPath%\plugins\org.eclipse.equinox.launcher_1.4.0.v20161219-1356.jar ^
     -application org.eclipse.rcptt.runner.headless ^
     -data %runnerWorkspace% ^
     -aut %autPath% ^
