@@ -6,7 +6,7 @@ Element-Type: context
 Element-Version: 2.0
 Id: __STS4CBFEeazfLC4KGmVkQ
 Runtime-Version: 2.1.0.201606221726
-Save-Time: 10/9/17 10:34 PM
+Save-Time: 11/6/17 12:22 PM
 
 ------=_.ecl.context-718f04b4-ed39-33e3-af62-0995e4561998
 Content-Type: text/ecl
@@ -16,7 +16,7 @@ proc open_perspective [val perspective_name] {
 	get-menu "Window/Perspective/Open Perspective/Other..." | click
 	with [get-window "Open Perspective"] {
 		get-table | select $perspective_name
-		get-button OK | click
+		get-button Open | click
 	}
 }
 
@@ -25,7 +25,7 @@ proc create_rao_project [val template_name] [val project_name] {
 	with [get-window "New Project"] {
 		with [get-editbox -after [get-label "Wizards:"]] {
 			key-type Enter
-			set-text rao
+			set-text "Rao X Project"
 		}
 		get-button "Next >" | click
 	}
